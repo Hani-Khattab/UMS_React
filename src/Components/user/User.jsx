@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
-export default function User({user}) {
-
+export default function User({user,onDelete}) {
+ 
     
   return (
      <div className="col-md-4">
@@ -11,6 +11,8 @@ export default function User({user}) {
                             <img className='Users_Img w-75 ' src={user.imageUrl} alt="Users_Image" />
                             <p>Email: {user.email}</p>
                             <Link to={`/users/${user.id}`} className='btn btn-outline-info'>Details</Link>
+                            <button onClick={()=>onDelete(user.id)} className='btn btn-outline-danger'>Delete</button>
+                            
                         </div>
                     </div>
   )
