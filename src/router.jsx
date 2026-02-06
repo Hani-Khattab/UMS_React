@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Users from "./Pages/Users/Users";
 import User from "./Pages/user/User";
+import Create from "./Pages/user/Create";
 
 const router = createBrowserRouter(
     [
@@ -19,6 +20,11 @@ const router = createBrowserRouter(
                 {
                     path:'About',
                     element:<About />
+                },
+
+                {
+                    path:'user/create',
+                    element:<Create />
                 },
 
                 {

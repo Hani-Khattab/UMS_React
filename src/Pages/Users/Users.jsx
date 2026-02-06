@@ -3,6 +3,7 @@ import Loader from '../../Components/Loader/Loader';
 import UseFetch from '../../hooks/UseFetch';
 import User from '../../Components/user/User';
 import { toast, Zoom } from 'react-toastify';
+import { useState } from 'react';
 export default function Users() {
 
     const {data , isLoader , isError} = UseFetch(`${import.meta.env.VITE_BURL}/users`);
